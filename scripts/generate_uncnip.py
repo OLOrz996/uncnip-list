@@ -66,15 +66,15 @@ def write_networks(path: pathlib.Path, networks: list[ipaddress.IPv4Network]) ->
 def write_metadata(
     path: pathlib.Path,
     source_url: str,
-    routes_text: str,
     cn_networks: list[ipaddress.IPv4Network],
     uncn_networks: list[ipaddress.IPv4Network],
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    cn_content = "".join(f"{network}\n" for network in cn_networks)
     metadata = {
         "source": "misakaio/chnroutes2",
         "source_url": source_url,
-        "source_sha256": hashlib.sha256(routes_text.encode("utf-8")).hexdigest(),
+        "cn_routes_sha256": hashlib.sha256(cn_content.encode("utf-8")).hexdigest(),
         "cn_ipv4_count": len(cn_networks),
         "non_cn_ipv4_count": len(uncn_networks),
     }
@@ -98,7 +98,6 @@ def main() -> None:
     write_metadata(
         pathlib.Path(args.metadata_output),
         args.source_url,
-        routes_text,
         cn_networks,
         uncn_networks,
     )

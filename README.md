@@ -6,7 +6,7 @@ The generator reads CN route data from [misakaio/chnroutes2](https://github.com/
 
 - `dist/cnip.txt`: CN IPv4 routes from `chnroutes2`.
 - `dist/uncnip.txt`: IPv4 routes outside the CN list. Use this as the overseas CIDR list for iKuai policy routing.
-- `dist/source.json`: Source hash and generated list counts.
+- `dist/source.json`: Normalized CN route hash and generated list counts.
 
 ## Generate locally
 
