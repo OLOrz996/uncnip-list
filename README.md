@@ -14,6 +14,18 @@ The generator reads CN route data from [misakaio/chnroutes2](https://github.com/
 python scripts/generate_uncnip.py
 ```
 
+## Check an IP
+
+```bash
+python scripts/check_ip.py 142.250.197.110
+```
+
+Example output:
+
+```text
+142.250.197.110: uncnip 142.0.0.0/8
+```
+
 ## Upstream update
 
 GitHub Actions runs `.github/workflows/generate-uncnip.yml` every hour, shortly after the upstream `chnroutes2` hourly update. It regenerates the files and commits only when the upstream data changes the generated output.
