@@ -1,7 +1,7 @@
 {
   "cn_ipv4_count": 3897,
-  "cn_routes_sha256": "9b8db893af2f46b9eb23ead5feb7ae3e7532bb3ea8f870d107eb921ffab63e39",
-  "non_cn_ipv4_count": 9854,
+  "cn_routes_sha256": "190992d3e044985590eb89a5ff871351df618ce39c474418fa553b5180d7fee0",
+  "non_cn_ipv4_count": 9855,
   "source": "misakaio/chnroutes2",
   "source_url": "https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt"
 }
